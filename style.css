@@ -8,12 +8,6 @@
 
 /*for search bar*/
 .search-container {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    /* top: 20px; */
-    right: 600px;
-    width: 300px;
     background-color: #f2f2f2;
     border-radius: 20px;
     padding: 5px;
@@ -33,13 +27,11 @@
 
 /*style for the category button*/
 .dropdown1 {
-    position: relative;
-    display: inline-block;
-    align-items: center;
-    top: 410px;
-    left: 500px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    position: absolute; /* Position it absolutely within the container */
+    top: 5px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    text-align: center;
+    z-index: 2;
 }
 
 .dropdown-button1 {
@@ -405,11 +397,124 @@ dropdown*/
     top: 1rem; 
     margin-left: 210px;
 }
-/* Responsive */
-@media only screen and (max-width: 530px) {
+
+
+
+
+/* Common styles for all screen sizes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Styles for the main container */
+.container {
+    background-color: #ddd;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 50px auto;
+    min-width: 500px;
+    max-width: 1000px;
+    opacity: 1;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+/* Styles for the logo and input-section */
+.logo {
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.logo img {
+    width: 8rem;
+    border-radius: 50px;
+    background: white;
+}
+
+/* Header styles */
+.container header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+}
+
+/* Date feature styles */
+#task-deadline {
+    margin-top: 20px;
+}
+
+/* Input field for tasks styles */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#todo-input {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Category button styles */
+.dropdown1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Search bar styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#search-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+}
+
+#search-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px 0;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
     .container {
-        margin: 0 20px;
-        max-width: 100rem;
-        min-width: 100rem;
+        margin: 20px;
+    }
+
+    .search-container {
+        max-width: 100%;
     }
 }
